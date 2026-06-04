@@ -2,6 +2,9 @@
 
 TypeScript control plane for filtering fraudulent or low-trust clicks before they pollute analytics, attribution, and paid-efficiency reporting.
 
+- Live: [http://fraud.kineticgain.com/](http://fraud.kineticgain.com/)
+- Repo: [https://github.com/mizcausevic-dev/fraud-click-filter](https://github.com/mizcausevic-dev/fraud-click-filter)
+
 ## Why this exists
 
 Traffic quality is usually treated like a security problem after the damage is already in the dashboards. By then:
@@ -53,6 +56,7 @@ Open:
 
 ## Validation
 
+- `npm run prerender`
 - `npm run build`
 - `npm run test`
 - `npm run demo`
