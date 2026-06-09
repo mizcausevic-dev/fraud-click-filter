@@ -15,6 +15,14 @@ Traffic quality is usually treated like a security problem after the damage is a
 
 `fraud-click-filter` models the traffic-integrity layer early enough to protect revenue reporting before bad clicks become fake performance.
 
+## What this product does
+
+`fraud-click-filter` filters low-trust traffic before it contaminates attribution, CAC, paid-efficiency reporting, affiliate payouts, or lead scoring. The output is not just a blocked-click count; it is a revenue-trust lane that tells growth and RevOps teams which clicks should be allowed, challenged, or dropped.
+
+A SaaS go-to-market analyst can use it to compare campaign source, click velocity, device risk, IP reputation, challenged sessions, dropped sessions, and spend at risk before making budget decisions. A SaaS value architect can use it to frame the commercial case: less paid spend wasted on synthetic demand, fewer false-positive channels, cleaner affiliate economics, and more reliable pipeline attribution.
+
+Technically, the repo exposes filter-lane events, traffic rules, threat signals, JSON endpoints, prerendered pages, screenshots, and verification notes without requiring production ad-platform credentials. The common Kinetic Gain pattern is converting hidden operating drag into named evidence, scored pressure, owner-readable decisions, and a concise executive story.
+
 ## Routes
 
 - `/`

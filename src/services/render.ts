@@ -149,6 +149,57 @@ function signalCard(signal: ReturnType<typeof signals>[number]) {
   </article>`;
 }
 
+function renderProductDepth() {
+  const cards = [
+    {
+      label: "Product depth",
+      title: "What this product does",
+      body: "Filters low-trust traffic before it contaminates attribution, CAC, paid-efficiency reporting, affiliate payouts, or lead scoring. The output is not just a blocked-click count; it is a revenue-trust lane."
+    },
+    {
+      label: "GTM analyst lens",
+      title: "Where growth teams use it",
+      body: "A SaaS go-to-market analyst can compare campaign source, click velocity, device risk, IP reputation, challenged sessions, dropped sessions, and spend at risk before making budget decisions."
+    },
+    {
+      label: "Value architecture",
+      title: "Where the money leaks",
+      body: "The value case is clean performance truth: less paid spend wasted on synthetic demand, fewer false-positive channels, cleaner affiliate economics, and more reliable pipeline attribution."
+    },
+    {
+      label: "Technical proof",
+      title: "What is inspectable",
+      body: "The repo exposes filter-lane events, traffic rules, threat signals, JSON endpoints, prerendered pages, screenshots, and verification notes without requiring production ad-platform credentials."
+    },
+    {
+      label: "Portfolio pattern",
+      title: "What these repos have in common",
+      body: "Each Kinetic Gain surface converts hidden operating drag into named evidence, scored pressure, owner-readable decisions, and a concise executive story."
+    }
+  ];
+
+  return `<section class="sec reveal">
+    <div class="sec-head">
+      <span class="sec-num">00</span>
+      <div>
+        <h2 class="sec-title">What the surface proves</h2>
+        <p class="sec-lead">This is the GTM and value-architecture layer missing from a generic generated page.</p>
+      </div>
+    </div>
+    <div class="card-grid">
+      ${cards
+        .map(
+          (card) => `<article class="acard signal-card reveal">
+            <span class="metric-chip">${escapeHtml(card.label)}</span>
+            <h3>${escapeHtml(card.title)}</h3>
+            <p class="signal-copy">${escapeHtml(card.body)}</p>
+          </article>`
+        )
+        .join("")}
+    </div>
+  </section>`;
+}
+
 export function renderOverview() {
   const stats = summary();
   const topSignals = signals();
@@ -207,6 +258,7 @@ export function renderOverview() {
         </div>
       </div>
     </section>
+    ${renderProductDepth()}
     <section class="sec reveal">
       <div class="sec-head">
         <span class="sec-num">01</span>
@@ -353,6 +405,7 @@ export function renderDocs() {
         <div class="hero-nav">${routeNav("/docs")}</div>
       </div>
     </section>
+    ${renderProductDepth()}
     <section class="sec reveal">
       <div class="sec-head">
         <span class="sec-num">01</span>
